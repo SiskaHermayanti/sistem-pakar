@@ -102,21 +102,14 @@ class Admin extends BaseController
         // Validasi form (sesuaikan ini dengan aturan validasi yang diperlukan)
         $validation = \Config\Services::validation();
         $validation->setRules([
-            'kode_gejala' => [
-                'rules' => 'required|alpha_numeric|max_length[255]',
-                'errors' => [
-                    'required' => 'Kode Gejala harus diisi.',
-                    'alpha_numeric' => 'Kode Gejala hanya boleh berisi huruf dan angka.',
-                    'max_length' => 'Panjang Kode Gejala tidak boleh lebih dari 255 karakter.',
-                ],
-            ],
+            
             'gejala' => 'required|max_length[255]',
         ]);
     
         if ($validation->withRequest($this->request)->run()) {
             // Data dari form
             $data = [
-                'kode_gejala' => $this->request->getPost('kode_gejala'),
+                
                 'gejala' => $this->request->getPost('gejala'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ];

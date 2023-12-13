@@ -28,6 +28,8 @@
                 <p class="font-semibold text-lg"><?= $solusi ?>, disarankan Konsultasi Langsung dengan Dokter.</p>
             </div>
         </div>
+
+        
     </div>
 </body>
 </html>
