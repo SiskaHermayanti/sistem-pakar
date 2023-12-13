@@ -58,8 +58,8 @@ class SolusiModel extends Model
     // }
     public function update_solusi($id_solusi, $data)
     {
-        return $this->update($data, [$this->primaryKey => $id_solusi]);
-    }
+        return $this->update($id_solusi, $data);
+    }    
 
     public function hapusSolusi($id_solusi)
     {
