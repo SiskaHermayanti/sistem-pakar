@@ -89,28 +89,32 @@
                     <form action="<?= base_url('/solusi/update_solusi/' . $solusi['id_solusi']) ?>" method="POST">
     <?= csrf_field() ?>
 
-    <div class="mb-4">
-        <label for="kode_penyakit" class="block text-gray-700">Kode Penyakit</label>
-        <select name="kode_penyakit" id="kode_penyakit" class="form-select w-96 bg-gray-200 border border-gray-300 rounded-md p-2" required>
-            <?php foreach ($daftar_penyakit as $penyakit) : ?>
-                <option value="<?= $penyakit['kode_penyakit'] ?>" <?= ($solusi['kode_penyakit'] == $penyakit['kode_penyakit']) ? 'selected' : '' ?>>
-                    <?= $penyakit['kode_penyakit'] ?>
-                </option>
-            <?php endforeach; ?>
-        </select>
-        <?= session('errors.kode_penyakit') ? '<p class="text-red-500">' . session('errors.kode_penyakit') . '</p>' : '' ?>
-    </div>
+    <form action="<?= base_url('/solusi/update_solusi/' . $solusi['id_solusi']) ?>" method="POST">
+                        <?= csrf_field() ?>
+                        <input type="hidden" name="id_solusi" value="<?= $solusi['id_solusi'] ?>">
 
-    <div class="mb-4">
-        <label for="solusi_pengobatan" class="block text-gray-700">Solusi Pengobatan</label>
-        <textarea name="solusi_pengobatan" id="solusi_pengobatan" placeholder="Masukkan Solusi Pengobatan" class="form-input w-96 bg-gray-200 border border-gray-300 rounded-md p-2" required><?= $solusi['solusi_pengobatan'] ?></textarea>
-        <?= session('errors.solusi_pengobatan') ? '<p class="text-red-500">' . session('errors.solusi_pengobatan') . '</p>' : '' ?>
-    </div>
+                        <div class="mb-4">
+                            <label for="kode_penyakit" class="block text-gray-700">Kode Penyakit</label>
+                            <select name="kode_penyakit" id="kode_penyakit" class="form-select w-96 bg-gray-200 border border-gray-300 rounded-md p-2" required>
+                                <?php foreach ($daftar_penyakit as $penyakit) : ?>
+                                    <option value="<?= $penyakit['kode_penyakit'] ?>" <?= ($solusi['kode_penyakit'] == $penyakit['kode_penyakit']) ? 'selected' : '' ?>>
+                                        <?= $penyakit['kode_penyakit'] ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                            <?= session('errors.kode_penyakit') ? '<p class="text-red-500">' . session('errors.kode_penyakit') . '</p>' : '' ?>
+                        </div>
 
-    <div>
-        <button type="submit" class="bg-teal-700 hover:bg-teal-500 text-gray-100 px-4 py-2 rounded text-sm transition duration-100">Update Solusi Pengobatan</button>
-    </div>
-</form>
+                        <div class="mb-4">
+                            <label for="solusi_pengobatan" class="block text-gray-700">Solusi Pengobatan</label>
+                            <textarea name="solusi_pengobatan" id="solusi_pengobatan" placeholder="Masukkan Solusi Pengobatan" class="form-input w-96 bg-gray-200 border border-gray-300 rounded-md p-2" required><?= $solusi['solusi_pengobatan'] ?></textarea>
+                            <?= session('errors.solusi_pengobatan') ? '<p class="text-red-500">' . session('errors.solusi_pengobatan') . '</p>' : '' ?>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="bg-teal-700 hover:bg-teal-500 text-gray-100 px-4 py-2 rounded text-sm transition duration-100">Update Solusi Pengobatan</button>
+                        </div>
+                    </form>
 
 
 

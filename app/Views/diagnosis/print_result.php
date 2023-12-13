@@ -28,6 +28,8 @@
                 <p class="font-semibold text-lg"><?= $solusi ?></p>
             </div>
         </div>
+
+        
     </div>
 </body>
 </html>
