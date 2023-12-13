@@ -104,14 +104,6 @@ class Penyakit extends BaseController
         // Validasi form (sesuaikan ini dengan aturan validasi yang diperlukan)
         $validation = \Config\Services::validation();
         $validation->setRules([
-            'kode_penyakit' => [
-                'rules' => 'required|alpha_numeric|max_length[255]',
-                'errors' => [
-                    'required' => 'Kode Penyakit harus diisi.',
-                    'alpha_numeric' => 'Kode Penyakit hanya boleh berisi huruf dan angka.',
-                    'max_length' => 'Panjang Kode Penyakit tidak boleh lebih dari 255 karakter.',
-                ],
-            ],
             'penyakit' => [
                 'rules' => 'required|max_length[255]',
                 'errors' => [
@@ -130,7 +122,6 @@ class Penyakit extends BaseController
         if ($validation->withRequest($this->request)->run()) {
             // Data dari form
             $data = [
-                'kode_penyakit' => $this->request->getPost('kode_penyakit'),
                 'penyakit' => $this->request->getPost('penyakit'),
                 'deskripsi_penyakit' => $this->request->getPost('deskripsi_penyakit'),
                 'updated_at' => date('Y-m-d H:i:s'),
@@ -164,6 +155,5 @@ class Penyakit extends BaseController
         // Redirect dengan pesan sukses
         return redirect()->to('/penyakit/index')->with('success', 'Penyakit berhasil dihapus.');
     }
-
     
 }

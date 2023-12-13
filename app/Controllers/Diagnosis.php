@@ -25,16 +25,21 @@ class Diagnosis extends Controller
 
         $gejala = $this->request->getPost();
 
-        // Inisialisasi Kode_Penyakit
-        $kode_penyakit = '';
-
         // Lakukan logika diagnosa
         if (isset($gejala['G001']) && isset($gejala['G003']) && isset($gejala['G005']) && isset($gejala['G006']) && isset($gejala['G007']) && isset($gejala['G008'])) {
             $kode_penyakit = 'P001';
         } elseif (isset($gejala['G002']) && isset($gejala['G008']) && isset($gejala['G018']) && isset($gejala['G022']) && isset($gejala['G023'])) {
             $kode_penyakit = 'P002';
-        } elseif (isset($gejala['G002']) && isset($gejala['G003']) && isset($gejala['G008']) && isset($gejala['G017']) && isset($gejala['G018']) && isset($gejala['G201'])) {
+        } elseif (isset($gejala['G002']) && isset($gejala['G003']) && isset($gejala['G008']) && isset($gejala['G017']) && isset($gejala['G018']) && isset($gejala['G021'])) {
             $kode_penyakit = 'P003';
+        } elseif (isset($gejala['G001']) && isset($gejala['G009']) && isset($gejala['G010']) && isset($gejala['G011']) && isset($gejala['G012'])) {
+            $kode_penyakit = 'P004';
+        } elseif (isset($gejala['G001']) && isset($gejala['G004']) && isset($gejala['G013']) && isset($gejala['G013']) && isset($gejala['G014'])) {
+            $kode_penyakit = 'P005';
+        } elseif (isset($gejala['G002']) && isset($gejala['G003']) && isset($gejala['G015']) && isset($gejala['G016']) && isset($gejala['G018']) && isset($gejala['G019']) && isset($gejala['G020'])) {
+            $kode_penyakit = 'P006';
+        } elseif (isset($gejala['G001']) && isset($gejala['G003']) && isset($gejala['G021'])) {
+            $kode_penyakit = 'P007';
         } else {
             $kode_penyakit = 'Tidak diketahui';
         }
