@@ -81,7 +81,20 @@
                     <h2 class="text-xl font-bold text-sky-700 mb-4">Edit Penyakit</h2>
 
                     <form action="<?= base_url('/solusi/update_solusi/' . $solusi['id_solusi']) ?>" method="POST">
+                        <?= csrf_field() ?>
+                        <input type="hidden" name="id_solusi" value="<?= $solusi['id_solusi'] ?>">
 
+                        <div class="mb-4">
+                            <label for="kode_penyakit" class="block text-gray-700">Kode Penyakit</label>
+                            <select name="kode_penyakit" id="kode_penyakit" class="form-select w-96 bg-gray-200 border border-gray-300 rounded-md p-2" required>
+                                <?php foreach ($daftar_penyakit as $penyakit) : ?>
+                                    <option value="<?= $penyakit['kode_penyakit'] ?>" <?= ($solusi['kode_penyakit'] == $penyakit['kode_penyakit']) ? 'selected' : '' ?>>
+                                        <?= $penyakit['kode_penyakit'] ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                            <?= session('errors.kode_penyakit') ? '<p class="text-red-500">' . session('errors.kode_penyakit') . '</p>' : '' ?>
+                        </div>
 
                         <div class="mb-4">
                             <label for="solusi_pengobatan" class="block text-gray-700">Solusi Pengobatan</label>
