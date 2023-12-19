@@ -84,12 +84,6 @@
                         <?= csrf_field() ?>
 
                         <div class="mb-4">
-                            <label for="kode_gejala" class="block text-gray-700">Kode Gejala</label>
-                            <input type="text" name="kode_gejala" id="kode_gejala" value="<?= $gejala['kode_gejala'] ?>" placeholder="Masukkan Kode Gejala" class="form-input w-96 bg-gray-200 border border-gray-300 rounded-md p-2" required>
-                            <?= session('errors.kode_gejala') ? '<p class="text-red-500">' . session('errors.kode_gejala') . '</p>' : '' ?>
-                        </div>
-
-                        <div class="mb-4">
                             <label for="gejala" class="block text-gray-700">Gejala</label>
                             <input type="text" name="gejala" id="gejala" value="<?= $gejala['gejala'] ?>" placeholder="Masukkan Gejala" class="form-input w-96 bg-gray-200 border border-gray-300 rounded-md p-2" required>
                             <?= session('errors.gejala') ? '<p class="text-red-500">' . session('errors.gejala') . '</p>' : '' ?>
