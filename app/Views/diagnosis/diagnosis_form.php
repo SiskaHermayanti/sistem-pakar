@@ -48,6 +48,7 @@
                     </div>
                 </div>
                 <!-- Sidebar ends -->
+                
                 <!-- Remove class [ h-64 ] when adding a card block -->
                 <div class="container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6 mr-6">
                     <h2 class="text-xl font-bold text-sky-700">Pilih Gejala yang Anda Alami untuk Diagnosis</h2>

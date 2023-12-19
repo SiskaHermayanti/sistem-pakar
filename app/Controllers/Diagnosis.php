@@ -40,7 +40,7 @@ class Diagnosis extends Controller
             // Tambahkan aturan lain sesuai kebutuhan
         ];
 
-        // Lakukan forward chaining
+        // forward chaining
         $diagnosed_disease = $this->forwardChaining($rules, $facts);
 
         // Dapatkan nama penyakit dan deskripsi berdasarkan kode penyakit

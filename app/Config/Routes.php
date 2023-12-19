@@ -15,5 +15,7 @@ $routes->set404Override();
 $routes->setAutoRoute(true);
 
 $routes->get('/', 'Admin::index');
+
+// USER
 $routes->get('/diagnosis_form', 'Diagnosis::index');
 
