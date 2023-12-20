@@ -66,14 +66,14 @@
                                     <span class="text-sm ml-2">Solusi Pengobatan</span>
                                 </a>
                             </li>
-                            <li class="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6">
+                            <!-- <li class="flex w-full justify-between text-gray-400 hover:text-gray-300 cursor-pointer items-center mb-6">
                                 <a href="<?= site_url('diagnosis/index') ?>" class="flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-puzzle" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                                 </svg>
                                     <span class="text-sm ml-2">Diagnosis</span>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>        
                     </div>
                 </div>
