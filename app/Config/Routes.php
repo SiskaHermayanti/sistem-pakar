@@ -18,4 +18,3 @@ $routes->get('/', 'Admin::index');
 
 // USER
 $routes->get('/diagnosis_form', 'Diagnosis::index');
-
